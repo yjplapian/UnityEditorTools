@@ -10,7 +10,7 @@ public static class GUIResizeUtility
     public static bool IsDraggingHandle(Rect handle) =>
         Event.current.type == EventType.MouseDown && handle.Contains(Event.current.mousePosition);
 
-    public static bool OnMouseUp() => 
+    public static bool EndDrag() => 
         Event.current.type == EventType.MouseUp;
 
     public static float SetHandlePositionAtCursor(Rect handle, bool isVertical) =>
